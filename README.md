@@ -1,8 +1,8 @@
-# Owner-avatar-ITPM-Assignment01-IT23699908_SECOND_Option1
+# Owner-avatar-ITPM-Assignment01-IT23648272_SECOND_Option1
 
 ## Chat Translator Test Automation
 
-This project contains an automated testing script (`test_automation.py`) designed to validate the translation capabilities of the PixelsSuite Chat Translator. It reads test cases from an Excel file, inputs "Singlish" text into the web application, retrieves the translated "Sinhala" output, and compares it against expected results to determine a PASS or FAIL status.
+This project contains an automated testing script (`IT23648272.py`) designed to validate the translation capabilities of the PixelsSuite Chat Translator. It reads test cases from an Excel file, inputs "Singlish" text into the web application, retrieves the translated "Sinhala" output, and compares it against expected results to determine a PASS or FAIL status.
 
 ## Prerequisites
 
@@ -12,8 +12,8 @@ This project contains an automated testing script (`test_automation.py`) designe
 
 ## Project Structure
 
-- `test_automation.py` - The main Python script that runs the Playwright automation.
-- `IT23699908.xlsx` - An example Excel file containing the test cases (Input, Expected Output, etc.).
+- `IT23648272.py` - The main Python script that runs the Playwright automation.
+- `IT23648272.xlsx` - An example Excel file containing the test cases (Input, Expected Output, etc.).
 - `venv/` - A Python virtual environment.
 
 ## Setup Instructions
@@ -45,7 +45,7 @@ This project contains an automated testing script (`test_automation.py`) designe
 To execute the automated test script, simply run the following command in your terminal:
 
 ```bash
-python test_automation.py --excel IT23699908.xlsx
+python IT23648272.py --excel IT23648272.xlsx
 ```
 
 ### Additional Command Line Arguments
@@ -62,7 +62,7 @@ You can customize the test execution by providing optional arguments:
 
 **Example with arguments:**
 ```bash
-python test_automation.py --excel IT23699908.xlsx --headless --timeout-ms 30000
+python IT23648272.py --excel IT23648272.xlsx --headless --timeout-ms 30000
 ```
 
 ## How It Works

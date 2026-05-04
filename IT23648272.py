@@ -7,6 +7,7 @@ from pathlib import Path
 import sys
 import openpyxl
 from openpyxl.cell.cell import MergedCell
+from typing import Union
 
 # Configuration
 ROOT_DIR = Path(__file__).resolve().parent.parent
@@ -71,7 +72,7 @@ def _pick_existing_path(candidates):
             return p
     return candidates[0] if candidates else None
 
-def _resolve_path(p: str | None) -> str | None:
+def _resolve_path(p: Union[str, None]) -> Union[str, None]:
     if not p:
         return None
     path = Path(p)
@@ -156,7 +157,7 @@ def _set_cell_value(ws, row: int, col: int, value):
     cell = _merged_top_left_cell(ws, row, col)
     cell.value = value
 
-def _find_column_index(header_values: list, requested_name: str | None, candidates: list[str]) -> int | None:
+def _find_column_index(header_values: list, requested_name: Union[str, None], candidates: list[str]) -> Union[int, None]:
     indexed = []
     for i, v in enumerate(header_values, start=1):
         if v is None:
@@ -169,7 +170,7 @@ def _find_column_index(header_values: list, requested_name: str | None, candidat
         if n and n not in norm_to_index:
             norm_to_index[n] = i
 
-    def match(name: str) -> int | None:
+    def match(name: str) -> Union[int, None]:
         n = _normalize_header(name)
         if not n:
             return None
